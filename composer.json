@@ -11,14 +11,11 @@
     ],
     "repositories": [
         {
-            "type":"package",
-            "package": {
-              "name": "om/icalparser",
-              "version":"master",
-              "source": {
-                  "url": "git@github.com:OzzyCzech/icalparser.git",
-                  "type": "vcs"
-                }
+            "type":"vcs",
+            "name": "om/icalparser",
+            "source": {
+                "url": "git@github.com:OzzyCzech/icalparser.git",
+                "type": "vcs"
             }
         }
     ],
@@ -38,7 +35,7 @@
         "laravel/tinker": "^2.10.1",
         "livewire/flux": "^2.0",
         "livewire/livewire": "^4.0",
-        "OzzyCzech/icalparser": "master",
+        "om/icalparser": "master",
         "spatie/browsershot": "^5.0",
         "spatie/laravel-settings": "^3.6",
         "stevebauman/purify": "^6.3",
