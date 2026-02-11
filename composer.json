@@ -12,7 +12,7 @@
     "repositories": [
         {
             "type":"vcs",
-            "url": "git@github.com:OzzyCzech/icalparser.git"
+            "url": "https://github.com/OzzyCzech/icalparser.git"
         }
     ],
     "license": "MIT",
