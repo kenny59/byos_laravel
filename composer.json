@@ -16,9 +16,8 @@
               "name": "om/icalparser",
               "version":"master",
               "source": {
-                  "url": "https://github.com/OzzyCzech/icalparser.git",
-                  "type": "git",
-                  "reference": "master"
+                  "url": "git@github.com:OzzyCzech/icalparser.git",
+                  "type": "vcs"
                 }
             }
         }
