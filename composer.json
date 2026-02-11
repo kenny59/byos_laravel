@@ -13,10 +13,7 @@
         {
             "type":"vcs",
             "name": "om/icalparser",
-            "source": {
-                "url": "git@github.com:OzzyCzech/icalparser.git",
-                "type": "vcs"
-            }
+            "url": "git@github.com:OzzyCzech/icalparser.git"
         }
     ],
     "license": "MIT",
