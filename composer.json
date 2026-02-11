@@ -9,6 +9,20 @@
         "trmnl-byos",
         "laravel"
     ],
+    "repositories": [
+        {
+            "type":"package",
+            "package": {
+              "name": "om/icalparser",
+              "version":"master",
+              "source": {
+                  "url": "https://github.com/OzzyCzech/icalparser.git",
+                  "type": "git",
+                  "reference": "master"
+                }
+            }
+        }
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.2",
@@ -25,7 +39,7 @@
         "laravel/tinker": "^2.10.1",
         "livewire/flux": "^2.0",
         "livewire/livewire": "^4.0",
-        "om/icalparser": "^3.2",
+        "om/icalparser": "master",
         "spatie/browsershot": "^5.0",
         "spatie/laravel-settings": "^3.6",
         "stevebauman/purify": "^6.3",
