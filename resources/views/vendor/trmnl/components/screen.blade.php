@@ -1,10 +1,11 @@
 @props([
     'noBleed' => false,
     'darkMode' => false,
-    'deviceVariant' => 'og',
+    'deviceVariant' => 'ogv2',
     'deviceOrientation' => null,
     'colorDepth' => '1bit',
     'scaleLevel' => null,
+    'cssVariables' => null,
 ])
 
 <!DOCTYPE html>
@@ -26,9 +27,18 @@
         <script src="{{ config('services.trmnl.base_url') }}/js/{{ config('trmnl-blade.framework_js_version') ?? config('trmnl-blade.framework_version', '2.1.0') }}/plugins.js"></script>
     @endif
     <title>{{ $title ?? config('app.name') }}</title>
+    @if(config('app.puppeteer_window_size_strategy') === 'v2' && !empty($cssVariables) && is_array($cssVariables))
+        <style>
+            :root {
+                @foreach($cssVariables as $name => $value)
+                {{ $name }}: {{ $value }};
+                @endforeach
+            }
+        </style>
+    @endif
 </head>
 <body class="environment trmnl">
-<div class="screen {{$noBleed ? 'screen--no-bleed' : ''}} {{ $darkMode ? 'dark-mode' : '' }} {{$deviceVariant ? 'screen--' . $deviceVariant : ''}} {{ $deviceOrientation ? 'screen--' . $deviceOrientation : ''}} {{ $colorDepth ? 'screen--' . $colorDepth : ''}} {{ $scaleLevel ? 'screen--scale-' . $scaleLevel : ''}}">
+<div class="screen {{ $noBleed ? 'screen--no-bleed' : '' }} {{ $darkMode ? 'dark-mode' : '' }} {{ $deviceVariant ? 'screen--' . $deviceVariant : '' }} {{ $deviceOrientation ? 'screen--' . $deviceOrientation : '' }} {{ $colorDepth ? 'screen--' . $colorDepth : '' }} {{ $scaleLevel ? 'screen--scale-' . $scaleLevel : '' }}">
     {{ $slot }}
 </div>
 </body>
